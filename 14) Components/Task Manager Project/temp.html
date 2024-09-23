@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar bg-dark navbar-dark">
+      <div class="container-fluid navbar-expand-sm">
+
+        <a href="#" class="navbar-brand">Task Manager</a>
+
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="container-fluid">
+
+      <button class="btn btn-outline-primary my-2" data-bs-toggle="modal" data-bs-target="#modal">Add</button>
+
+      <div class="card">
+
+        <div class="card-header">
+          Task List
+        </div>
+
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item active d-flex justify-content-between">Task 1 <span
+                class="badge bg-success rounded-pill">new</span></li>
+
+            <li class="list-group-item d-flex justify-content-between">Task 2 <span
+                class="badge bg-warning rounded-pill">In Progress</span></li>
+
+            <li class="list-group-item d-flex justify-content-between">Task 3 <span
+                class="badge bg-danger rounded-pill">cencelled</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="modal fade" id="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header my-2">
+              <h5 class="modal-title">Add Task</h5>
+              <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body my-2">
+              <form>
+
+                <label for="taskName" class="form-label">Task Name</label>
+                <input type="text" placeholder="task name..." id="taskName" class="form-control">
+
+                <label for="taskDesc" class="form-label">Task Description</label>
+
+                <textarea id="taskDesc" placeholder="task description" class="form-control"></textarea>
+
+                <label for="taskStatus" class="form-label">Task Status</label>
+
+                <select id="taskStatus" class="form-select">
+                  <option>new</option>
+                  <option>In Progress</option>
+                  <option>cancelled</option>
+                </select>
+
+
+              </form>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn bg-primary text-white">Save</button>
+              <button type="button" class="btn bg-danger text-white" data-bs-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+
+  </footer>
+
+
+  <script src="./js/bootstrap.js"></script>
+</body>
+
+</html>
